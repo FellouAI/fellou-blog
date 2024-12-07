@@ -20,5 +20,5 @@ COPY . .
 RUN pnpm run build
 
 FROM httpd:2.4 AS runtime
-COPY --from=build /app/dist /usr/local/apache2/htdocs/docs
+COPY --from=build /app/dist /usr/local/apache2/htdocs/blog
 EXPOSE 80
