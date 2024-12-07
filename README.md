@@ -31,7 +31,6 @@
 Check out the [Blog](https://fellou.ai/blog)
 <br/>
 
-
 ## 🦙 Tina CMS
 
 By default, this template comes pre-configured with Tina CMS.
@@ -49,7 +48,7 @@ The documentation for Tina CMS can be found [here](https://tina.io/docs/)
 > Tina is completely optional, and you can remove it, and it will still function in the same way.
 
 ## 💪 Features:
-    
+
 - ✅ Minimal styling
 - ✅ Mobile responsive
 - ✅ 100/100 Lighthouse performance
@@ -158,7 +157,7 @@ title: MacBook Pro 2022
 description: 'The new MacBook Pro 2022 is here. With the Apple M2 chip, a new design, and more, the new MacBook Pro is the best laptop Apple has ever made.'
 pubDate: 'Jul 02 2022'
 heroImage: '../../assets/bg.jpg'
-category: 'Category 1'
+category: 'Product'
 tags: ['JavaScript', 'css', 'HTML5', 'GitHub']
 draft: true <---
 ```
