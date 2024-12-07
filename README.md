@@ -5,11 +5,8 @@
 <hr/>
 
 <h3 align="center">
- ⭐ Leave a star if you like this project! ⭐️
+ ⭐ Fellou Blog ⭐️
 </h3>
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdanielcgilibert%2Fblog-template)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danielcgilibert/blog-template)
 
 </div>
 
@@ -29,12 +26,11 @@
 12. [CLI](#-Commands)
 13. [Contributors](#-Contributors)
 
-## 💻 Demo
+## 💻 Blog
 
-Check out the [Demo](https://blog-template-gray.vercel.app/), hosted on Vercel
+Check out the [Blog](https://fellou.ai/blog)
 <br/>
 
-https://github.com/danielcgilibert/blog-template/assets/44746462/56b8399e-cc5b-45a8-b9d2-d69833ecadb1
 
 ## 🦙 Tina CMS
 
@@ -53,12 +49,6 @@ The documentation for Tina CMS can be found [here](https://tina.io/docs/)
 > Tina is completely optional, and you can remove it, and it will still function in the same way.
 
 ## 💪 Features:
-
-<p align="center">
-  <a href="https://pagespeed.web.dev/analysis/https-blog-template-gray-vercel-app/7ovjfewos9?form_factor=mobile">
-    <img width="510" alt="openblog Lighthouse Score" src="public/openblog-lighthouse-score.svg">
-  <a>
-</p>
     
 - ✅ Minimal styling
 - ✅ Mobile responsive
@@ -205,9 +195,3 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm run format`       | Format codes with Prettier                                                                                                       |
 | `pnpm run sync`         | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
 | `pnpm run lint`         | Lint with ESLint                                                                                                                 |
-
-## 👋 Contributors
-
-<a href="https://github.com/danielcgilibert/blog-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=danielcgilibert/blog-template" />
-</a>
