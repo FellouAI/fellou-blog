@@ -53,7 +53,7 @@
 		"husky": "^8.0.3",
 		"lint-staged": "^15.2.0",
 		"mdast-util-to-string": "^4.0.0",
-		"motion": "^10.16.4",
+		"motion": "^10.18.0",
 		"pagefind": "^1.0.3",
 		"prettier": "^3.0.3",
 		"prettier-config-standard": "^7.0.0",
