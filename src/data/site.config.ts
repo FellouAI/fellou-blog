@@ -13,7 +13,7 @@ export const siteConfig: SiteConfig = {
 	site: 'https://fellou.ai', // Write here your website url
 	author: 'Fellou', // Site author
 	title: 'Fellou Blog', // Site title.
-	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', // Description to display in the meta tags
+	description: 'Everything you need to know about AI browser, agent programming framework, a totaly new Agent OS. Company updates &amp; Technology Trends.', // Description to display in the meta tags
 	lang: 'en-GB',
 	ogLocale: 'en_GB',
 	shareMessage: 'Share this post', // Message to share a post on social media
