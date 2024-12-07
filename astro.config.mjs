@@ -8,6 +8,7 @@ import { siteConfig } from './src/data/site.config'
 // https://astro.build/config
 export default defineConfig({
 	site: siteConfig.site,
+	base: '/docs',
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 		drafts: true,
