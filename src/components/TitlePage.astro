@@ -1,6 +1,8 @@
 ---
 import Title from './Title.astro'
-import Shape from './icons/Shape.astro'
+import { Image } from 'astro:assets'
+
+const faviconUrl = new URL('/blog/favicon.png', Astro.url).href
 type Props = {
 	title: string
 }
@@ -9,6 +11,6 @@ const { title } = Astro.props
 ---
 
 <div class='flex justify-start items-center gap-2 title'>
-	<Shape />
+	<Image src={faviconUrl} width={50} height={50} format='png' alt={`img of ${title}`} />
 	<Title>{title}</Title>
 </div>
