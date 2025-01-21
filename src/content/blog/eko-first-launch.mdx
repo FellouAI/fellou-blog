@@ -6,45 +6,53 @@ pubDate: 2025-1-21T12:00:00.000Z
 heroImage: ../../assets/images/bg.jpg
 category: Product
 tags:
-  - Fellou
-  - AIBrowser
+  - Eko
+  - Programming language
   - Tech
-  - Deepsearch
   - Productivity
   - AI
 ---
 
-> In today’s fast-paced world, time is more valuable than ever. At [Fellou](https://fellou.ai/), we’re rethinking productivity. Our goal is to deliver a personalized, AI-powered companion that enhances human abilities and automates tasks seamlessly, making work and life smarter and more efficient. In this article, we’ll explore how [Fellou](https://fellou.ai/) is shaping the future of productivity and what’s next for our mission to revolutionize how we work.
+> Productivity refers to the ability to create value through the effective utilization of resources under specific conditions. Production, in turn, is the workflow that transforms resources into value. The transformation of productivity has historically been driven by technological progress. During the Industrial Revolution, mechanization shifted repetitive manual labor to machine-led production, significantly boosting labor productivity.
+
+Similar to the labor transformation during the Industrial Revolution, the current AI revolution is abstracting human intellectual labor (or semi-intellectual, semi-physical labor) and converting it into universal, executable workflows. In this system, AI gradually takes over the execution of tedious and repetitive tasks.
+Against this backdrop, Eko, as a workflow programming language, aims to enable developers to easily describe, design, and optimize workflows, swiftly deploying them into production. This allows for the liberation of humans from low-level, repetitive labor, driving society toward more creative work that generates higher value.
 
 ![](https://fellou.s3.us-west-1.amazonaws.com/blog/fellou-first-launch/1.png)
 
-## Fellou: The Next-Gen AI Browser
+## Eko: The Agent Programming Language for Next-Level Automation
 
-Unlike the previous revolutions, AI offers more than just automation — it offers a **digital companion** that understands, collaborates, and acts alongside us. And this is where [Fellou](https://fellou.ai/) comes in.
+The Eko framework was created to abstractly represent human labor (workflows) and translate this into production-ready action sequences, freeing people from repetitive tasks. Eko (pronounced like ‘echo’) is a production-ready JavaScript framework that enables developers to create reliable agents, ranging from simple commands to complex workflows. It provides a unified interface for running agents in both computer and browser environments.
 
-In the future, productivity will not be defined by the tools you use, but by the partnerships you form — with AI, with your environment, and with your own potential. [Fellou](https://fellou.ai/) is leading the charge in this revolution, offering a new kind of productivity tool that combines cutting-edge technology with deep human understanding.
+Unlike traditional automation tools that require tedious step-by-step instructions, Eko is powered by intelligence. It allows users to describe their goals in plain language, and Eko’s system autonomously creates and executes the optimal plan. From simple tasks to complex workflows, Eko adapts to the needs of its users, making automation not just efficient, but intuitive.
 
-With Fellou by your side, you can **optimize your time, amplify your capabilities, and unlock your fullest potential**. It’s time to step into the future of productivity — are you ready to work smarter, not harder?
+In the future of work, the real value won’t just lie in the tools we use, but in how we interact with intelligent systems. With Eko, you're not just using a tool — you're collaborating with an agent that understands your intentions, executes tasks on your behalf, and learns from your feedback to continuously improve.
 
 ## Core Features
+Eko's strengths lie in its flexibility, autonomy, and ease of use. Here’s how it’s reshaping the automation landscape:
 
-[Fellou](https://fellou.ai/)’s core capabilities are embedded directly into the user’s browser experience, allowing even non-developers to utilize the power of AI in a way that feels as seamless as using a developer’s tool like Cursor.
+### Natural Language Workflow Generation
 
-- **Shadow Workspace**: [Fellou](https://fellou.ai/)’s intelligent workspace tracks and manages all user activities in the background. It allows real-time mon itoring and intervention, like attending a Zoom meeting but for your digital assistant. Users can view current tasks, adjust processes, and ensure seamless execution with full control at any point.
+Eko introduces a new programming paradigm that combines natural language and code, allowing developers to create complex workflows in a more intuitive and efficient manner. For example:
+const workflow = await eko.generate("List all PDF files modified in the last week, extract their titles, and create a summary spreadsheet.");
+Eko takes care of all the complexities behind the scenes, analyzing the task, breaking it down into smaller subtasks, and selecting the right tools for each step. It’s like having a personal assistant who not only understands your needs but also knows how to take action.
 
-![](https://fellou.s3.us-west-1.amazonaws.com/blog/fellou-first-launch/2.gif)
+Users only need to describe the task goals in natural language, and Eko will automatically plan and generate executable workflows, eliminating the need for the tedious step-by-step instructions typical in traditional programming. Unlike conventional automation frameworks, Eko doesn’t rely on explicitly defined actions but instead intelligently determines the optimal execution path based on the described goal. This "goal-driven" workflow generation approach not only enhances development efficiency but also significantly lowers the programming barrier.
 
-- **Workflow**: [Fellou](https://fellou.ai/)’s dual-layer architecture breaks down tasks into smaller, manageable sub-goals, improving execution accuracy and efficiency. This structure adapts dynamically to feedback, ensuring tasks are executed as accurately and efficiently as possible. All workflows are automatically executed within the Shadow Workspace, allowing users to focus on high-level tasks while Fellou handles the rest.
+### Hierarchical Planning
 
-![](https://fellou.s3.us-west-1.amazonaws.com/blog/fellou-first-launch/3.gif)
+Eko’s two-layer execution model transforms task automation by separating planning from execution, offering a more intuitive and flexible approach. Instead of directly mapping user requests to tool calls, Eko first analyzes the desired outcome in the planning phase, breaking it down into logical subtasks and selecting the appropriate tools. This upfront planning ensures clarity and control, allowing users to inspect and adjust the plan before execution begins. Once the plan is set, Eko dynamically adapts during execution, adjusting to changing conditions without rethinking the entire task. This separation not only improves reliability but also enhances reusability and adaptability, making Eko an ideal solution for both simple and complex workflows. By combining structured planning with flexible execution, Eko offers a smarter, more efficient way to automate tasks.
 
-- **Cross-platform Integration**: Whether on desktop, mobile, or tablet, [Fellou](https://fellou.ai/) seamlessly syncs work across devices, allowing for uninterrupted productivity. It ensures that your progress, files, and tasks are consistent across all platforms, removing barriers to fluid work.
+### Environment-Aware Architecture
 
-![](https://fellou.s3.us-west-1.amazonaws.com/blog/fellou-first-launch/4.gif)
-
-- **Cross-app Integration: No Zapier or IFTTT**: Forget about complex automation tools. [Fellou](https://fellou.ai/) enables quick, seamless information transfer between apps with simple drag-and-drop or copy-paste functionality. It also understands and processes context from transferred data, offering insightful suggestions, optimizing workflows, and making cross-app usage far more intuitive and efficient.
-
-![](https://fellou.s3.us-west-1.amazonaws.com/blog/fellou-first-launch/5.gif)
+Eko’s architecture is designed to seamlessly operate across various environments, providing a flexible, environment-aware framework that adapts to different platforms and development styles. It consists of three main layers:
+1. Universal Core: This central layer provides platform-independent functionality such as workflow management, tool registration, and integration with large language models (LLMs) like Claude or OpenAI. It also includes a hook system for additional customization.
+2. Environment-Specific Tools: Eko tailors its tools to each environment:
+  - Browser Extension Tools for tasks like tab management, web search, and DOM interaction.
+  - Web Tools for web-safe capabilities like content extraction and element clicks.
+  - Node.js Tools for system-level operations such as file handling and shell commands.
+3. Environment Bridge: This layer manages environment detection, tool registration, resource management, and ensures secure execution across platforms. It handles security measures like API key management, user authentication, and access control, adapting to the specific needs of each environment (browser, web server, or Node.js).
+Eko automatically registers tools based on the environment using a helper function, making it easy for developers to set up and work within their chosen platform. The system also provides built-in error handling to manage environment-specific issues. This multi-platform flexibility ensures that Eko can work across browsers, web environments, and local systems, enabling seamless development and integration for a wide range of use cases.
 
 ## Competition & Advantages
 
