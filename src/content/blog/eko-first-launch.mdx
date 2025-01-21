@@ -15,14 +15,14 @@ tags:
 
 > Productivity refers to the ability to create value through the effective utilization of resources under specific conditions. Production, in turn, is the workflow that transforms resources into value. The transformation of productivity has historically been driven by technological progress. During the Industrial Revolution, mechanization shifted repetitive manual labor to machine-led production, significantly boosting labor productivity.
 
-![](https://github.com/FellouAI/fellou-blog/blob/main/src/assets/images/eko-homepage.png)
+![](https://github.com/FellouAI/fellou-blog/blob/main/src/assets/images/eko-homepage.png?raw=true)
 
 Similar to the labor transformation during the Industrial Revolution, the current AI revolution is abstracting human intellectual labor (or semi-intellectual, semi-physical labor) and converting it into universal, executable workflows. In this system, AI gradually takes over the execution of tedious and repetitive tasks.
 Against this backdrop, Eko, as a workflow programming language, aims to enable developers to easily describe, design, and optimize workflows, swiftly deploying them into production. This allows for the liberation of humans from low-level, repetitive labor, driving society toward more creative work that generates higher value.
 
 ## Eko: The Agent Programming Language for Next-Level Automation
 
-![](https://github.com/FellouAI/fellou-blog/blob/main/src/assets/images/eko-arch.webp)
+![](https://github.com/FellouAI/fellou-blog/blob/main/src/assets/images/eko-arch.webp?raw=true)
 The Eko framework was created to abstractly represent human labor (workflows) and translate this into production-ready action sequences, freeing people from repetitive tasks. Eko (pronounced like ‘echo’) is a production-ready JavaScript framework that enables developers to create reliable agents, ranging from simple commands to complex workflows. It provides a unified interface for running agents in both computer and browser environments.
 
 Unlike traditional automation tools that require tedious step-by-step instructions, Eko is powered by intelligence. It allows users to describe their goals in plain language, and Eko’s system autonomously creates and executes the optimal plan. From simple tasks to complex workflows, Eko adapts to the needs of its users, making automation not just efficient, but intuitive.
@@ -30,18 +30,22 @@ Unlike traditional automation tools that require tedious step-by-step instructio
 In the future of work, the real value won’t just lie in the tools we use, but in how we interact with intelligent systems. With Eko, you're not just using a tool — you're collaborating with an agent that understands your intentions, executes tasks on your behalf, and learns from your feedback to continuously improve.
 
 ## Core Features
+
 Eko's strengths lie in its flexibility, autonomy, and ease of use. Here’s how it’s reshaping the automation landscape:
 
 ### Natural Language Workflow Generation
 
 Eko introduces a new programming paradigm that combines natural language and code, allowing developers to create complex workflows in a more intuitive and efficient manner. For example:
-```
-const workflow = await eko.generate("List all PDF files modified in the last week, extract their titles, and create a summary spreadsheet.");
+
+```js
+const workflow = await eko.generate(
+	'List all PDF files modified in the last week, extract their titles, and create a summary spreadsheet.'
+)
 ```
 
 Eko takes care of all the complexities behind the scenes, analyzing the task, breaking it down into smaller subtasks, and selecting the right tools for each step. It’s like having a personal assistant who not only understands your needs but also knows how to take action.
 
-![](https://github.com/FellouAI/fellou-blog/blob/main/src/assets/images/eko-language_to_program.png)
+![](https://github.com/FellouAI/fellou-blog/blob/main/src/assets/images/eko-language_to_program.png?raw=true)
 
 Users only need to describe the task goals in natural language, and Eko will automatically plan and generate executable workflows, eliminating the need for the tedious step-by-step instructions typical in traditional programming. Unlike conventional automation frameworks, Eko doesn’t rely on explicitly defined actions but instead intelligently determines the optimal execution path based on the described goal. This "goal-driven" workflow generation approach not only enhances development efficiency but also significantly lowers the programming barrier.
 
@@ -52,23 +56,27 @@ Eko’s hierarchical Planning transforms task automation by separating planning 
 ### Environment-Aware Architecture
 
 Eko’s architecture is designed to seamlessly operate across various environments, providing a flexible, environment-aware framework that adapts to different platforms and development styles. It consists of three main layers:
+
 1. Universal Core: This central layer provides platform-independent functionality such as workflow management, tool registration, and integration with large language models (LLMs) like Claude or OpenAI. It also includes a hook system for additional customization.
 2. Environment-Specific Tools: Eko tailors its tools to each environment:
-  - Browser Extension Tools for tasks like tab management, web search, and DOM interaction.
-  - Web Tools for web-safe capabilities like content extraction and element clicks.
-  - Node.js Tools for system-level operations such as file handling and shell commands.
+
+- Browser Extension Tools for tasks like tab management, web search, and DOM interaction.
+- Web Tools for web-safe capabilities like content extraction and element clicks.
+- Node.js Tools for system-level operations such as file handling and shell commands.
+
 3. Environment Bridge: This layer manages environment detection, tool registration, resource management, and ensures secure execution across platforms. It handles security measures like API key management, user authentication, and access control, adapting to the specific needs of each environment (browser, web server, or Node.js).
-Eko automatically registers tools based on the environment using a helper function, making it easy for developers to set up and work within their chosen platform. The system also provides built-in error handling to manage environment-specific issues. This multi-platform flexibility ensures that Eko can work across browsers, web environments, and local systems, enabling seamless development and integration for a wide range of use cases.
+   Eko automatically registers tools based on the environment using a helper function, making it easy for developers to set up and work within their chosen platform. The system also provides built-in error handling to manage environment-specific issues. This multi-platform flexibility ensures that Eko can work across browsers, web environments, and local systems, enabling seamless development and integration for a wide range of use cases.
 
 ### Hook System
-The core motivation behind Eko's hook system is to enhance the observability and intervenability of production processes, thereby improving safety and reliability. In AI-driven automation workflows, hooks serve as critical monitoring and control points, allowing developers to observe and intervene at key stages of the process. With hooks, developers can monitor AI decision-making, validate and modify inputs and outputs, collect performance data, and even interrupt or adjust the execution of workflows when necessary. 
+
+The core motivation behind Eko's hook system is to enhance the observability and intervenability of production processes, thereby improving safety and reliability. In AI-driven automation workflows, hooks serve as critical monitoring and control points, allowing developers to observe and intervene at key stages of the process. With hooks, developers can monitor AI decision-making, validate and modify inputs and outputs, collect performance data, and even interrupt or adjust the execution of workflows when necessary.
 
 This flexibility introduces a "human-in-the-loop" mechanism within automation, ensuring that potential risks and errors can still be controlled despite the system running autonomously. Specifically, Eko provides three types of hooks: workflow hooks, subtask hooks, and tool hooks, each offering different levels of control granularity. Workflow hooks allow for setup and cleanup before and after the workflow execution, subtask hooks provide monitoring at the individual task level, and tool hooks enable fine-grained adjustments to tool operations. These hooks not only enhance the efficiency of automation but also introduce necessary safety checks and manual intervention within the process, ultimately optimizing both the performance and safety of the overall system.
 
 ### Competition and Advantages: Why Eko Leads the Way
 
 Eko stands out in a crowded market of automation frameworks and AI agents, but what truly sets it apart is its ability to execute complex workflows autonomously and intelligently. Let’s explore some of the key advantages of using Eko over other platforms.
-![](https://github.com/FellouAI/fellou-blog/blob/main/src/assets/images/eko-comparison.png)
+![](https://github.com/FellouAI/fellou-blog/blob/main/src/assets/images/eko-comparison.png?raw=true)
 
 **Overall Advantages**
 
@@ -87,6 +95,7 @@ Eko stands out in a crowded market of automation frameworks and AI agents, but w
 Eko isn’t just a tool — it’s a vision for the future of work. As AI continues to evolve, we believe that intelligent agents like Eko will become indispensable parts of our daily workflows, working alongside us to solve problems, optimize tasks, and improve decision-making. The future of productivity isn’t about automating tasks — it’s about creating intelligent agents that can adapt to our needs, understand our goals, and provide actionable insights. With Eko, we are moving toward a future where AI becomes a true partner at work, not just a tool.
 
 ## What’s Next for Eko?
+
 Looking ahead, Eko will continue to push the boundaries of what’s possible with intelligent agents. Some of the exciting directions include:
 
 - Deepening Tool Ecosystem: With the open-source Eko framework, we’re fostering a vibrant community of developers who are constantly creating new tools to meet emerging needs. Eko’s ecosystem will continue to expand, making it the go-to platform for developers and businesses alike.
