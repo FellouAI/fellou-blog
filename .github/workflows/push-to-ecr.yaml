@@ -3,7 +3,7 @@ name: Push to ECR
 on:
   push:
     branches:
-      - feat/new-chat-v2
+      - main
 
 jobs:
   build:
