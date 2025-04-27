@@ -13,12 +13,12 @@ export async function getStaticPaths() {
 	}))
 }
 
-const { tag } = Astro.props
+const { tag } = Astro.props as { tag: string }
 
 const posts = await getPostByTag(tag)
 ---
 
-<BaseLayout title={tag}>
+<BaseLayout title={tag} robots={tag.toLowerCase() === 'fellou' ? 'noindex' : undefined}>
 	<TitlePage title={tag} />
 	<ListPosts posts={posts} />
 </BaseLayout>

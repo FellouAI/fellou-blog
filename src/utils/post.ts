@@ -18,9 +18,9 @@ export const getPosts = async (max?: number) => {
 		.slice(0, max)
 }
 
-export const getTags = async () => {
+export const getTags = async (): Promise<string[]> => {
 	const posts = await getCollection('blog')
-	const tags = new Set()
+	const tags = new Set<string>()
 	posts
 		.filter((post) => !post.data.draft)
 		.forEach((post) => {

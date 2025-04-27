@@ -8,9 +8,10 @@ export interface Props {
 	description?: string
 	ogImage?: string | undefined
 	articleDate?: string | undefined
+	robots?: string
 }
 
-const { title, description = siteConfig.description, ogImage, articleDate } = Astro.props
+const { title, description = siteConfig.description, ogImage, articleDate, robots } = Astro.props
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 const socialImageURL = new URL(ogImage ? ogImage : '/open-graph.png', Astro.url).href
 
@@ -41,6 +42,7 @@ import { AstroFont } from 'astro-font'
 <meta name='title' content={siteTitle} />
 <meta name='description' content={description} />
 <meta name='author' content={siteConfig.author} />
+{robots && <meta name='robots' content={robots} />}
 
 <!-- Open Graph / Facebook -->
 <meta property='og:type' content={articleDate ? 'article' : 'website'} />
