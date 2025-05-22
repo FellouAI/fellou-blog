@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Build Image
-    runs-on: [self-hosted, fellou-us-gpu]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Check out code
