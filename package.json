@@ -66,7 +66,7 @@
 		"typescript": "^5.2.2"
 	},
 	"lint-staged": {
-		"*.{astro,js,jsx,ts,tsx,md,mdx,json}": [
+		"*.{astro,js,jsx,ts,tsx,md,json}": [
 			"prettier --write --plugin-search-dir=."
 		]
 	},
