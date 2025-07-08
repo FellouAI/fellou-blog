@@ -1,0 +1,52 @@
+---
+import { sluglify } from '@/utils'
+
+export interface Props {
+	category?: string
+	title?: string
+}
+
+const { category, title } = Astro.props
+
+const breadcrumbItems = [
+	{ name: 'Home', url: 'https://fellou.ai' },
+	{ name: 'Blog', url: '/blog' }
+]
+
+if (category) {
+	breadcrumbItems.push({
+		name: category,
+		url: `/blog/category/${sluglify(category.toLowerCase())}/1`
+	})
+}
+
+if (title) {
+	breadcrumbItems.push({
+		name: title,
+		url: ''
+	})
+}
+---
+
+<nav class='mb-6 text-sm text-gray-600 dark:text-gray-400' aria-label='Breadcrumb'>
+	<ol class='flex items-center space-x-1'>
+		{
+			breadcrumbItems.map((item, index) => (
+				<li class='flex items-center'>
+					{index > 0 && <span class='mx-2 text-gray-400 dark:text-gray-500'>&gt;</span>}
+					{item.url ? (
+						<a
+							href={item.url}
+							class='hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-150'
+						>
+							{item.name}
+						</a>
+					) : (
+						<span class='text-gray-800 dark:text-gray-200 font-medium'>{item.name}</span>
+					)}
+				</li>
+			))
+		}
+	</ol>
+</nav>
+

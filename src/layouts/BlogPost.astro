@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content'
 import FormattedDate from '@/components/FormattedDate'
 import BaseLayout from '@/layouts/BaseLayout'
 import Tag from '@/components/Tag'
+import Breadcrumb from '@/components/Breadcrumb'
 import type { MarkdownHeading } from 'astro'
 import { Image } from 'astro:assets'
 
@@ -14,7 +15,7 @@ type Props = {
 }
 
 const { data, readTime, headings, id } = Astro.props
-const { title, description, pubDate, heroImage, tags } = data
+const { title, description, pubDate, heroImage, tags, category } = data
 
 const articleDate = pubDate.toISOString()
 ---
@@ -26,6 +27,8 @@ const articleDate = pubDate.toISOString()
 	articleDate={articleDate}
 >
 	<article class='min-w-full md:py-4 sm:max-w-none md:max-w-none'>
+		<Breadcrumb category={category} title={title} />
+
 		<header class='mb-3 flex flex-col justify-center items-center gap-6'>
 			<div class='flex flex-col gap-2'>
 				<div class='flex items-center justify-center gap-x-1'>
