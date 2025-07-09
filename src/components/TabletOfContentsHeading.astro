@@ -15,14 +15,14 @@ export interface Props {
 ---
 
 <li class='flex flex-col'>
-	<a
-		href={'#' + heading.slug}
+	<button
+		data-heading-id={heading.slug}
 		class={cn(
-			`bg-slate-200 dark:bg-slate-800 dark:hover:bg-indigo-400 hover:bg-indigo-300 hover:text-white  py-1 px-4 dark:text-white rounded-full mb-2 first-letter:uppercase w-fit line-clamp-2`
+			`bg-slate-200 dark:bg-slate-800 dark:hover:bg-indigo-400 hover:bg-indigo-300 hover:text-white  py-1 px-4 dark:text-white rounded-full mb-2 first-letter:uppercase w-fit line-clamp-2 text-left cursor-pointer transition-colors duration-200`
 		)}
 	>
 		{heading.text}
-	</a>
+	</button>
 	{
 		heading.subheadings.length > 0 && (
 			<ul class='ml-3'>
@@ -33,3 +33,20 @@ export interface Props {
 		)
 	}
 </li>
+
+<script>
+	document.addEventListener('click', (event) => {
+		const target = event.target as HTMLElement
+		if (target.tagName === 'BUTTON' && target.dataset.headingId) {
+			event.preventDefault()
+			const headingId = target.dataset.headingId
+			const headingElement = document.getElementById(headingId)
+			if (headingElement) {
+				headingElement.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				})
+			}
+		}
+	})
+</script>
