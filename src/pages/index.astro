@@ -6,8 +6,8 @@ import BaseLayout from '@/layouts/BaseLayout'
 import { getPosts } from '@/utils'
 import { siteConfig } from '@/site-config'
 
-const MAX_POSTS = 5 // max number of posts to show on the home page
-const posts = await getPosts(MAX_POSTS)
+// Remove MAX_POSTS limit to show all posts
+const posts = await getPosts()
 ---
 
 <BaseLayout title='Home'>
@@ -15,7 +15,7 @@ const posts = await getPosts(MAX_POSTS)
 	<ListCategories />
 
 	<div>
-		<h2 class='text-lg font-medium tracking-wide text-end'>Latest Posts</h2>
+		<h2 class='text-lg font-medium tracking-wide text-end'>All Posts</h2>
 		<ListPosts FirstBig={true} posts={posts} />
 	</div>
 </BaseLayout>

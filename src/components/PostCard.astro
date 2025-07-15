@@ -11,14 +11,14 @@ const {
 } = Astro.props
 ---
 
-<article class='grid grid-rows-[300px_auto] md:grid-rows-[300px_220px] min-h-full group'>
+<article class='grid grid-rows-[350px_auto] md:grid-rows-[350px_220px] min-h-full group'>
 	<a class='relative overflow-hidden' href={`/blog/${slug}/`}>
 		<Image
 			src={heroImage}
 			width={600}
-			height={200}
+			height={350}
 			format='webp'
-			class='h-full min-w-full object-cover hover:scale-[101%] transition-all duration-200 rounded-[2px]'
+			class='h-full w-full object-contain bg-gray-100 dark:bg-gray-800 hover:scale-[101%] transition-all duration-200 rounded-[2px]'
 			alt={`img of ${title}`}
 		/>
 
