@@ -27,10 +27,17 @@ const SOCIALNETWORKS = [
 
 <header class='relative flex items-center h-12 font-semibold'>
 	<a class='mr-auto' href='https://fellou.ai'>
+		<!-- Light mode logo -->
 		<img
 			src='https://fellou.s3.us-west-1.amazonaws.com/logos/06.svg'
 			alt='Fellou Logo'
-			class='h-8'
+			class='h-8 dark:hidden'
+		/>
+		<!-- Dark mode logo -->
+		<img
+			src='https://cdn.fellou.ai/images/images/new-logo-title.svg'
+			alt='Fellou Logo'
+			class='h-8 hidden dark:block'
 		/>
 	</a>
 
