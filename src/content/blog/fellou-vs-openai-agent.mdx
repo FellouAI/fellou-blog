@@ -1,7 +1,7 @@
 ---
 title: 'Fellou vs. OpenAI Agent: Head-to-Head Performance Test'
 description: >-
-  FRecently, Fellou and OpenAI Agent went head-to-head in a rigorous performance test, tracking real data and results across 13 typical task scenarios. Here’s a detailed look at the evaluation and what we found.
+  FRecently, Fellou and OpenAI Agent went head-to-head in a rigorous performance test, tracking real data and results across 13 typical task scenarios. Here's a detailed look at the evaluation and what we found.
 pubDate: 2025-10-09T12:00:00.000Z
 heroImage: ../../assets/images/fellou-vs-openai/cover.jpg
 category: Product
@@ -14,11 +14,13 @@ tags:
   - AI
 ---
 
+import VideoComparison from '../../components/mdx/VideoComparison.astro';
+
 ## Test Background
 
 We evaluated both platforms across four core task types:
 
-![](../../assets/images/fellou-vs-openai/1.webp)
+![](../../assets/images/fellou-vs-openai/1.jpg)
 
 Each task was executed simultaneously on both platforms to ensure a fair comparison. We assessed performance across multiple dimensions: **execution capability, efficiency, report presentation, and intent recognition**.
 
@@ -43,13 +45,18 @@ For instance, when searching for competitive product analysis reports across maj
 
 Fellou was roughly **35% faster**, demonstrating clear advantages in large-scale and multi-dimensional information integration.
 
-<iframe width="879" height="578" src="https://www.youtube.com/embed/-6D88tr_l5M" title="fellou Execution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-> Fellou’s Shadow Space Parallel Retrieval Task Execution
-
-<iframe width="879" height="578" src="https://www.youtube.com/embed/J65NBNG0q2k" title="openai Execution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-> OpenAI Agent Single-Threaded Task Retrieval Execution
+<VideoComparison 
+  leftVideo={{
+    src: "https://www.youtube.com/embed/-6D88tr_l5M",
+    title: "fellou Execution",
+    description: "Fellou's Shadow Space Parallel Retrieval Task Execution"
+  }}
+  rightVideo={{
+    src: "https://www.youtube.com/embed/J65NBNG0q2k",
+    title: "openai Execution", 
+    description: "OpenAI Agent Single-Threaded Task Retrieval Execution"
+  }}
+/>
 
 ## 3. Report Presentation
 
@@ -57,15 +64,18 @@ Fellou delivers **highly visual and interactive reports**. Users receive outputs
 
 OpenAI Agent, by contrast, primarily delivers text and tables, with limited visualization or interactive elements.
 
-
-<iframe width="879" height="578" src="https://www.youtube.com/embed/gFdxlzr9Rv8" title="fellou report" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-> Fellou’s Interactive Report
-
-
-<iframe width="879" height="578" src="https://www.youtube.com/embed/ye2T_ueia1E" title="openai report" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-> OpenAI’s Report
+<VideoComparison 
+  leftVideo={{
+    src: "https://www.youtube.com/embed/gFdxlzr9Rv8",
+    title: "fellou report",
+    description: "Fellou's Interactive Report"
+  }}
+  rightVideo={{
+    src: "https://www.youtube.com/embed/ye2T_ueia1E",
+    title: "openai report", 
+    description: "OpenAI's Report"
+  }}
+/>
 
 ## 4. Intent Recognition
 
@@ -75,15 +85,20 @@ Fellou dynamically interacts with users to clarify and refine instructions in re
 
 For example, if a user gives a fuzzy instruction like:
 
-> “Order Whole Foods bakery and cheese for a family party”
+> Order Whole Foods bakery and cheese for a family party
 
-<iframe width="879" height="578" src="https://www.youtube.com/embed/P18E_QhWdLk" title="fellou" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-> Fellou
-
-<iframe width="879" height="578" src="https://www.youtube.com/embed/2u1ohkgi5PY" title="openai" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-> OpenAI
+<VideoComparison 
+  leftVideo={{
+    src: "https://www.youtube.com/embed/P18E_QhWdLk",
+    title: "fellou",
+    description: "Fellou"
+  }}
+  rightVideo={{
+    src: "https://www.youtube.com/embed/2u1ohkgi5PY",
+    title: "openai", 
+    description: "OpenAI"
+  }}
+/>
 
 
 Fellou can execute the task step-by-step, guiding the user through order and payment. OpenAI Agent, however, can only provide solution suggestions without completing the task.
